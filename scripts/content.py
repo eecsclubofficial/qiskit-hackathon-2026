@@ -3,21 +3,21 @@
 EVENT = {
     "name": "Qiskit Fall Fest Hackathon",
     "date": "Oct 9, 2026",
-    "venue": "Vatsal",
-    "duration": "One week",
+    "duration": "Oct 9 to Oct 17, 2026",
     "host": "IISER Bhopal (EECS Club and Physics Club)",
 }
 
-# Fill these in before publishing; they appear in the README and guidelines PDF.
+# These appear in the README and guidelines PDF.
 PLACEHOLDERS = {
-    "deadline": "[SUBMISSION DEADLINE - to be confirmed by organisers]",
-    "team_size": "[TEAM SIZE - to be confirmed by organisers]",
-    "contact": "[ORGANISER CONTACT EMAIL]",
-    "submit_channel": "[SUBMISSION FORM / CHANNEL LINK]",
+    "deadline": "Oct 17, 2026, 12:00 noon",
+    "team_size": "Up to 4 members per team",
+    "presentation": "Oct 18, 2026 (selected teams only, invited after submissions are reviewed)",
+    "contact": "eecs.club.official@gmail.com",
+    "submit_channel": "Google Form (link shared by the organisers)",
 }
 
 READ_FIRST = (
-    "You have one week, a laptop, and AI assistants. The ten problem statements are suggestions, "
+    "You have until Oct 17, a laptop, and AI assistants. The ten problem statements are suggestions, "
     "not a menu you must order from. You may pick one, extend one, combine several, or invent "
     "something more ambitious. Original, advanced and cross-track projects are welcome and will be "
     "judged on the same criteria."
@@ -45,13 +45,13 @@ JUDGING = [
     ("Correctness and verification", 30,
      "Results checked against an exact or classical reference, tests, sensible error bars"),
     ("Understanding and insight", 25,
-     "Clear explanation of why the method works or fails, shown in the write-up and in the live questions"),
+     "Clear explanation of why the method works or fails, shown in the write-up (and in the live questions for invited teams)"),
     ("Honest comparison and limits", 20,
      "A fair classical baseline, stated assumptions, no unsupported claims of quantum advantage"),
     ("Ambition and originality", 15,
      "Stretch goals, combined tracks, or a new idea beyond the suggested statements"),
-    ("Clarity of demo and code", 10,
-     "Readable, reproducible code and a clear five-minute story"),
+    ("Clarity of code and write-up", 10,
+     "Readable, reproducible code and a clear write-up and story"),
 ]
 
 DELIVERABLES = [
@@ -59,8 +59,17 @@ DELIVERABLES = [
     "A write-up PDF (two to four pages) covering the problem, method, results and an honest limits section.",
     "At least one figure that shows the main result.",
     "A short AI-use note: which tools you used, one thing the AI got wrong, and how you caught it.",
-    "A five-minute demo followed by questions; every team member must be able to take questions.",
 ]
+
+PRESENTATION = (
+    "Submissions close on Oct 17, 2026, 12:00 noon. After reviewing them, the organisers invite selected teams "
+    "to present on Oct 18, 2026: a five-minute demo followed by questions, where every team member must be "
+    "able to take questions. Teams that are not invited are still fully judged on their submission."
+)
+
+PITCH_ADVICE = (
+    "Teams are selected from their submissions alone; a pitch deck is not part of the submission and is not used for selection. However, selected teams will have less than 24 hours between the invitation and the presentation, so we strongly advise preparing a short pitch deck for your idea in advance."
+)
 
 BONUS = (
     "Bonus points are available for a hardware run on a real IBM backend, with a clear comparison "
@@ -68,7 +77,7 @@ BONUS = (
 )
 
 AI_POLICY = (
-    "AI assistants are welcome at every step. The AI-use note and the live questions exist because "
+    "AI assistants are welcome at every step. The AI-use note and the presentation questions exist because "
     "the person submitting is responsible for the result: you should be able to explain each "
     "circuit, formula and plot, and show how you verified it."
 )
@@ -103,7 +112,7 @@ OPEN_INVITATION = (
     "If you have your own idea, such as a quantum game, an algorithm tutor, a benchmark of a quantum "
     "algorithm from our workshop (Grover, phase estimation, the QFT), or a tool that makes any of the "
     "above easier for the next student, propose it. Write three sentences on the problem, the method, "
-    "and how you will know it worked, and check with the organisers early in the week."
+    "and how you will know it worked, and check with the organisers early."
 )
 
 HOW_TO_SCOPE = (

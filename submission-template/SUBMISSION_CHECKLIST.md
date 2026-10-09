@@ -12,5 +12,6 @@ Tick every box before you submit your repository link.
 - [ ] README states what is simulated (noiseless / noise model / hardware) and which parts are shortcuts
 - [ ] No API tokens, secrets or personal data in the repository or its git history
 - [ ] (Optional bonus) Hardware run compared clearly with the simulator: backend, date, job ID
-- [ ] Every team member can explain every circuit, formula and plot, and take questions in the five-minute demo
+- [ ] Every team member can explain every circuit, formula and plot, and take questions if invited to present on Oct 18
+- [ ] (Advised, not submitted) A short pitch deck is ready in case we are invited to present on Oct 18
 - [ ] Ran `python scripts/check_submission.py <your repo path>` from the organisers' repo and fixed any failures

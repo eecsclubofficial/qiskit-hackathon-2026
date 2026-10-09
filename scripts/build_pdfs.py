@@ -134,10 +134,12 @@ def header_block(story, title, subtitle):
 
 def common_deliverables(story):
     story.append(P("What every team submits", "h1"))
-    story.append(P("Whichever problem you choose (or invent), your submission has the same five parts:"))
+    story.append(P("Whichever problem you choose (or invent), your submission has the same four parts:"))
     story.append(bullets(C.DELIVERABLES))
     story.append(Spacer(1, 4))
     story.append(P("<b>Bonus.</b> " + C.BONUS))
+    story.append(P("<b>Presentation.</b> " + C.PRESENTATION))
+    story.append(P("<b>Pitch deck (advised).</b> " + C.PITCH_ADVICE))
     story.append(P("Full submission rules are in <i>docs/guidelines_and_submission_rules.pdf</i>."))
     story.append(P("How you are judged", "h1"))
     story.append(P("The same scoring applies to every problem and to original projects alike."))
@@ -239,11 +241,12 @@ def build_guidelines():
     story.append(table([
         ["Item", "Details"],
         ["Event", f"{C.EVENT['name']}, hosted by {C.EVENT['host']}"],
-        ["Kick-off", f"{C.EVENT['date']} ({C.EVENT['venue']})"],
-        ["Duration", f"{C.EVENT['duration']} to build"],
+        ["Kick-off", C.EVENT['date']],
+        ["Build period", C.EVENT['duration']],
         ["Submission deadline", ph["deadline"]],
         ["Team size", ph["team_size"]],
         ["Where to submit", ph["submit_channel"]],
+        ["Presentations", ph["presentation"]],
         ["Questions", ph["contact"]],
         ["Tools", "Laptop and AI assistants. Everything can be done on a simulator (Qiskit Aer or statevector tools)."],
     ], [40 * mm, 130 * mm]))
@@ -277,8 +280,6 @@ def build_guidelines():
         ["4", "<b>AI-use note</b>",
          "Short note: which tools you used, one thing the AI got wrong, and how you caught it. Included in the "
          "write-up and/or as <font face='Courier'>AI_USE_NOTE.md</font>."],
-        ["5", "<b>Demo</b>",
-         "Five-minute demo followed by questions. Every team member must be able to take questions."],
     ], [8 * mm, 40 * mm, 122 * mm]))
     story.append(Spacer(1, 4))
     story.append(P("<b>Bonus.</b> " + C.BONUS + " Include the backend name, the date of the run, the job ID, "
@@ -343,7 +344,7 @@ def build_guidelines():
         "The AI-use note must be specific. <b>\"The AI sometimes makes mistakes\" is not acceptable.</b> Name one real "
         "error (a wrong gate, a wrong formula, a hallucinated function, a misleading explanation) and describe the "
         "check that caught it, such as a test, a comparison with exact diagonalisation, or a known limiting case.",
-        "In the live questions, any team member may be asked to explain any circuit, formula or plot. If you cannot "
+        "If your team is invited to present, any team member may be asked to explain any circuit, formula or plot. If you cannot "
         "explain or verify code, it will cost you marks under <i>Understanding and insight</i> and <i>Correctness and "
         "verification</i>.",
         "Do not present AI-generated text or results as verified when you have not verified them.",
@@ -362,9 +363,12 @@ def build_guidelines():
         "used to protect real data, and you must say so in your README.",
     ]))
 
-    story.append(P("8. The demo and live questions", "h1"))
+    story.append(P("8. Presentation (selected teams, Oct 18)", "h1"))
+    story.append(P(C.PRESENTATION))
+    story.append(P("<b>Prepare a pitch deck in advance.</b> " + C.PITCH_ADVICE))
     story.append(bullets([
         "<b>Five minutes</b> for the demo, then questions. Keep to time.",
+        "Prepare your pitch deck before you submit: invited teams have under 24 hours to present, and the deck is not used for selection.",
         "Tell a clear story: the problem, what you built, the main result, and what it does not show.",
         "Show something running, or a recorded run of the main result as a fallback.",
         "<b>Every team member must be present and able to take questions.</b>",
@@ -379,7 +383,7 @@ def build_guidelines():
 
     story.append(P("10. Integrity and conduct", "h1"))
     story.append(bullets([
-        "Work must be produced by your team during the hackathon week. Cite any code, data, papers or tutorials you "
+        "Work must be produced by your team between Oct 9 and Oct 17. Cite any code, data, papers or tutorials you "
         "build on (for example the IBM SQD tutorials), and make clear what you added.",
         "Using open-source libraries (Qiskit, PySCF, ldpc, stim and so on) is expected. Importing a library call that "
         "does the whole task is allowed, but where a problem says to build something yourself, building it yourself "
@@ -399,13 +403,13 @@ def build_guidelines():
         "AI-use note names the tools, one specific AI error, and how you caught it",
         "No API tokens or secrets in the repository or git history",
         "Hardware run (optional bonus) is compared clearly against the simulator",
-        "Every team member can explain every circuit, formula and plot, and can take questions in the demo",
+        "Every team member can explain every circuit, formula and plot (you may be invited to present on Oct 18)",
         f"Submitted via {ph['submit_channel']} before {ph['deadline']}",
     ]
     story.append(table([["Done", "Item"]] + [["[  ]", b] for b in boxes], [14 * mm, 156 * mm]))
 
     story.append(P("12. Getting help", "h1"))
-    story.append(P(f"Check with the organisers early in the week if you are unsure about scope, a custom idea, or "
+    story.append(P(f"Check with the organisers early if you are unsure about scope, a custom idea, or "
                    f"any rule above: {ph['contact']}."))
 
     doc.build(story, onFirstPage=_deco_guidelines, onLaterPages=_deco_guidelines)

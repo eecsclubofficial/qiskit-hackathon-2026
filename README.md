@@ -1,15 +1,16 @@
 # Qiskit Fall Fest Hackathon
 
-**Kick-off:** Oct 9, 2026 · **Venue:** Vatsal · **Duration:** one week · **Hosts:** IISER Bhopal (EECS Club and Physics Club)
+**Kick-off:** Oct 9, 2026 · **Build period:** Oct 9 to Oct 17 · **Hosts:** IISER Bhopal (EECS Club and Physics Club)
 
-You have one week, a laptop, and AI assistants. Pick a quantum problem, build it, test it against a classical alternative, and tell us honestly what worked and what did not.
+You have until Oct 17, a laptop, and AI assistants. Pick a quantum problem, build it, test it against a classical alternative, and tell us honestly what worked and what did not.
 
 | Item | Details |
 |------|---------|
-| Submission deadline | `[SUBMISSION DEADLINE - to be confirmed by organisers]` |
-| Team size | `[TEAM SIZE - to be confirmed by organisers]` |
-| Where to submit | `[SUBMISSION FORM / CHANNEL LINK]` |
-| Questions | `[ORGANISER CONTACT EMAIL]` |
+| Submission deadline | Oct 17, 2026, 12:00 noon |
+| Team size | Up to 4 members per team |
+| Where to submit | Google Form (link shared by the organisers) |
+| Presentations | Oct 18, 2026 (selected teams only, invited after submissions are reviewed) |
+| Questions | eecs.club.official@gmail.com |
 
 ## Contents
 
@@ -115,7 +116,7 @@ The most impressive entries will not stop at one box. None of these is required.
 | QAOA for code design | QAOA and error correction | Search for good parity-check matrices or qubit layouts as an optimisation problem. |
 | Decoder as a hardware design | LDPC decoding and FPGA or fixed-point design | Quantify the accuracy lost by low-precision arithmetic, as a first step toward hardware. |
 
-**Open invitation.** Have your own idea, such as a quantum game, an algorithm tutor, a benchmark of a quantum algorithm from the workshop (Grover, phase estimation, the QFT), or a tool that makes any of the above easier for the next student? Write three sentences on the problem, the method, and how you will know it worked, and check with the organisers early in the week.
+**Open invitation.** Have your own idea, such as a quantum game, an algorithm tutor, a benchmark of a quantum algorithm from the workshop (Grover, phase estimation, the QFT), or a tool that makes any of the above easier for the next student? Write three sentences on the problem, the method, and how you will know it worked, and check with the organisers early.
 
 **Scoping a combined project.** Get the smallest version of each part working separately first, then connect them. A small, honest, working combination beats an ambitious one that does not run.
 
@@ -131,9 +132,12 @@ Every team submits **a GitHub repository** that contains everything below. Start
    - **Honest limits**
 3. **At least one figure** that shows the main result (in the write-up, and saved in `figures/`).
 4. **A short AI-use note:** which tools you used, **one thing the AI got wrong**, and **how you caught it**.
-5. **A five-minute demo followed by questions.** Every team member must be able to take questions.
 
-How to submit: create a GitHub repository, push all code, the write-up PDF, figures and the AI-use note, then send the repository link through `[SUBMISSION FORM / CHANNEL LINK]` before the deadline. Never commit API tokens or secrets.
+**Presentation (selected teams only).** Submissions close on **Oct 17, 2026, 12:00 noon**. After reviewing them, the organisers invite selected teams to present on **Oct 18, 2026**: a five-minute demo followed by questions, where every team member must be able to take questions. Teams that are not invited are still fully judged on their submission.
+
+**Prepare a pitch deck in advance (advised).** Teams are selected from their submissions alone; a pitch deck is not part of the submission and is not used for selection. However, selected teams will have less than 24 hours between the invitation and the presentation, so we strongly advise preparing a short pitch deck for your idea in advance.
+
+How to submit: create a GitHub repository, push all code, the write-up PDF, figures and the AI-use note, then send the repository link through the Google Form before the deadline (Oct 17, 2026, 12:00 noon). Never commit API tokens or secrets.
 
 The full list of rules, the repo requirements, the write-up outline and a final checklist are in [`docs/guidelines_and_submission_rules.pdf`](docs/guidelines_and_submission_rules.pdf).
 
@@ -144,10 +148,10 @@ The same scoring applies to every problem and to original projects alike.
 | Criterion | Points | What judges look for |
 |-----------|--------|----------------------|
 | Correctness and verification | 30 | Results checked against an exact or classical reference, tests, sensible error bars |
-| Understanding and insight | 25 | Clear explanation of why the method works or fails, shown in the write-up and in the live questions |
+| Understanding and insight | 25 | Clear explanation of why the method works or fails, shown in the write-up (and in the live questions for invited teams) |
 | Honest comparison and limits | 20 | A fair classical baseline, stated assumptions, no unsupported claims of quantum advantage |
 | Ambition and originality | 15 | Stretch goals, combined tracks, or a new idea beyond the suggested statements |
-| Clarity of demo and code | 10 | Readable, reproducible code and a clear five-minute story |
+| Clarity of code and write-up | 10 | Readable, reproducible code and a clear write-up and story |
 | **Total** | **100** | |
 
 ## Bonus: real hardware
@@ -156,7 +160,7 @@ Bonus points are available for a hardware run on a real IBM backend, with a clea
 
 ## Using AI
 
-AI assistants are welcome at every step. The AI-use note and the live questions exist because the person submitting is responsible for the result: you should be able to explain each circuit, formula and plot, and show how you verified it.
+AI assistants are welcome at every step. The AI-use note and the presentation questions exist because the person submitting is responsible for the result: you should be able to explain each circuit, formula and plot, and show how you verified it.
 
 ## Repository layout
 
@@ -201,7 +205,7 @@ AI assistants are welcome at every step. The AI-use note and the live questions 
 
 ### For organisers: regenerating the PDFs
 
-All text lives in `scripts/content.py`. Fill in the placeholders at the top of that file (deadline, team size, contact, submission link), then:
+All text lives in `scripts/content.py`. Event details (deadline, team size, contact) are at the top of that file. After editing, run:
 
 ```bash
 pip install -r requirements-organisers.txt
