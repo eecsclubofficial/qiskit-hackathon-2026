@@ -1,0 +1,2 @@
+# Only needed to regenerate the PDFs in tracks/ and docs/ (python scripts/build_pdfs.py)
+reportlab>=4.0
